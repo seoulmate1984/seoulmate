@@ -12,122 +12,54 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #fef5e7 0%, #fdebd3 25%, #fce8d0 50%, #fbe7d1 75%, #fff8f0 100%);
-            min-height: 100vh;
-            color: #2c4251;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            line-height: 1.6;
         }
 
+        /* Header Section with Background */
         header {
             background: 
-                linear-gradient(135deg, rgba(20, 30, 48, 0.75) 0%, rgba(44, 66, 81, 0.85) 100%),
+                linear-gradient(135deg, rgba(20, 30, 48, 0.8) 0%, rgba(44, 66, 81, 0.85) 100%),
                 url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=80');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
-            padding: 5rem 2rem;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-            text-align: center;
+            height: 40vh;
+            min-height: 400px;
             position: relative;
-            overflow: hidden;
-            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Navigation Bar */
+        .top-nav {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
             display: flex;
             align-items: center;
-            justify-content: center;
+            gap: 1rem;
         }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 30% 50%, rgba(44, 66, 81, 0.3) 0%, rgba(20, 30, 48, 0.6) 100%);
-            z-index: 0;
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 1;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo-display {
-            margin-bottom: 3rem;
-            animation: fadeIn 1s ease-in;
-        }
-
-        .logo-display svg {
-            width: 180px;
-            height: 180px;
-            margin: 0 auto 1.5rem;
-            filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
-        }
-
-        .brand-name {
-            font-size: 3rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        }
-
-        .brand-tagline {
-            font-size: 1.5rem;
-            color: #ff6b8a;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        .logo-icon {
+            width: 50px;
+            height: 50px;
         }
 
         .logo-text {
-            font-size: 2.5rem;
-            font-weight: 700;
             color: white;
-            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
         }
 
         .logo-accent {
             color: #e07856;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            color: #ff6b8a;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero-subtitle {
-            font-size: 1.4rem;
-            color: white;
-            margin-bottom: 2rem;
-            font-weight: 400;
-        }
-
-        .hero-features {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-cta {
-            font-size: 1rem;
-            color: white;
-            font-weight: 500;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 3rem auto 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 3rem;
         }
 
         nav ul {
@@ -137,74 +69,91 @@
         }
 
         nav a {
-            text-decoration: none;
             color: white;
-            font-weight: 500;
+            text-decoration: none;
+            font-size: 0.95rem;
             transition: color 0.3s;
-            font-size: 1.1rem;
         }
 
         nav a:hover {
-            color: #ff6b8a;
-        }
-
-        .content-section {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 3rem 2rem;
-        }
-
-        .logo-container {
-            margin-bottom: 2rem;
-            animation: fadeIn 1s ease-in;
-        }
-
-        .logo-container img {
-            max-width: 250px;
-            height: auto;
-            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
-        }
-
-        h1 {
-            font-size: 3rem;
-            color: #2c4251;
-            margin-bottom: 1rem;
-            animation: slideUp 0.8s ease-out;
-        }
-
-        .subtitle {
-            font-size: 1.3rem;
-            color: #5a7184;
-            margin-bottom: 1rem;
-            font-weight: 300;
-        }
-
-        .tagline {
-            font-size: 1.1rem;
             color: #e07856;
-            font-weight: 600;
+        }
+
+        /* Hero Content */
+        .hero-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            color: #ff6b8a;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .hero-features {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 1rem;
+        }
+
+        .hero-cta {
+            font-size: 0.95rem;
+            color: white;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        main {
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #2c4251;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
             margin-bottom: 3rem;
         }
 
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
         .feature-card {
-            background: rgba(255, 255, 255, 0.8);
+            background: white;
             padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s, box-shadow 0.3s;
-            border: 2px solid rgba(224, 120, 86, 0.1);
         }
 
         .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 32px rgba(224, 120, 86, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
         }
 
         .feature-icon {
@@ -215,131 +164,108 @@
         .feature-card h3 {
             color: #2c4251;
             margin-bottom: 0.8rem;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
         }
 
         .feature-card p {
-            color: #5a7184;
+            color: #666;
             line-height: 1.6;
         }
 
+        /* CTA Section */
         .cta-section {
             background: linear-gradient(135deg, #e07856 0%, #d66b4f 100%);
             padding: 3rem 2rem;
-            border-radius: 30px;
+            border-radius: 8px;
             text-align: center;
             margin: 3rem auto;
-            max-width: 900px;
-            box-shadow: 0 12px 40px rgba(224, 120, 86, 0.3);
+            max-width: 800px;
         }
 
         .cta-section h2 {
             color: white;
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-bottom: 1rem;
         }
 
         .cta-section p {
-            color: rgba(255, 255, 255, 0.95);
+            color: white;
             font-size: 1.1rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .btn {
             display: inline-block;
-            padding: 1rem 2.5rem;
+            padding: 0.9rem 2.5rem;
             background: white;
             color: #e07856;
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 4px;
             font-weight: 600;
-            font-size: 1.1rem;
             transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
         }
 
         .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
+        /* Footer */
         footer {
+            background: #2c4251;
+            color: white;
             text-align: center;
             padding: 2rem;
-            color: #5a7184;
-            margin-top: 4rem;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        footer p {
+            font-size: 0.9rem;
         }
 
         @media (max-width: 768px) {
-            h1 {
+            header {
+                height: 50vh;
+                min-height: 450px;
+            }
+
+            .hero-title {
                 font-size: 2rem;
             }
 
-            .subtitle {
-                font-size: 1.1rem;
+            .top-nav {
+                flex-direction: column;
+                gap: 1rem;
             }
 
             nav ul {
                 gap: 1rem;
-                font-size: 0.9rem;
+                font-size: 0.85rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <div class="logo-display">
-                <svg viewBox="0 0 200 200" style="width: 180px; height: 180px;">
-                    <!-- Traditional Korean roof -->
+        <div class="top-nav">
+            <div class="logo-section">
+                <svg class="logo-icon" viewBox="0 0 200 200">
                     <path d="M 30 80 Q 30 70, 40 70 L 90 70 Q 100 70, 100 60 Q 100 70, 110 70 L 160 70 Q 170 70, 170 80 L 165 85 L 35 85 Z" 
                           fill="#2c4251" stroke="#2c4251" stroke-width="2"/>
-                    
-                    <!-- House structure -->
                     <rect x="45" y="85" width="110" height="80" fill="none" stroke="#2c4251" stroke-width="3"/>
-                    
-                    <!-- Heart - split into two colors -->
                     <path d="M 100 105 Q 85 95, 75 105 Q 70 115, 75 125 L 100 145" 
                           fill="#2c4251" stroke="none"/>
                     <path d="M 100 105 Q 115 95, 125 105 Q 130 115, 125 125 L 100 145" 
                           fill="#e07856" stroke="none"/>
-                    
-                    <!-- Open book at bottom -->
                     <path d="M 60 150 L 100 140 L 140 150 L 140 165 L 100 155 L 60 165 Z" 
                           fill="none" stroke="#2c4251" stroke-width="2"/>
                     <line x1="100" y1="140" x2="100" y2="155" stroke="#2c4251" stroke-width="2"/>
                 </svg>
-                
-                <h1 class="brand-name">Seoulmate</h1>
-                <p class="brand-tagline">Language & Culture</p>
+                <div class="logo-text">Seoul<span class="logo-accent">mate</span></div>
             </div>
-            
-            <div class="logo-text">Seoul<span class="logo-accent">Mate</span> Korean Language Institute</div>
-            <h1 class="hero-title">Course Information</h1>
-            <p class="hero-subtitle">KOREAN LANGUAGE INSTITUTE — Learn the language, live the culture</p>
-            <p class="hero-features">Small groups • Native instructors • Flexible schedules</p>
-            <p class="hero-cta">Enroll now — limited seats available</p>
-            
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -349,12 +275,20 @@
                 </ul>
             </nav>
         </div>
+
+        <div class="hero-content">
+            <h1 class="hero-title">Course Information</h1>
+            <p class="hero-subtitle">KOREAN LANGUAGE INSTITUTE — Learn the language, live the culture</p>
+            <p class="hero-features">Small groups • Native instructors • Flexible schedules</p>
+            <p class="hero-cta">Enroll now — limited seats available</p>
+        </div>
     </header>
 
     <main>
-        <section class="content-section">
-
-            <div class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose SeoulMate?</h2>
+            
+            <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">👥</div>
                     <h3>Small Groups</h3>
@@ -385,7 +319,7 @@
                 <p>Enroll now — limited seats available</p>
                 <a href="#enroll" class="btn">Enroll Today</a>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
