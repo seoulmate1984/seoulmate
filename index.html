@@ -1,106 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="SeoulMate Korean Language Institute" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SeoulMate Korean Language Institute</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
-    background-color: #000;
-  }
-  .hero {
-    position: relative;
-    height: 50vh;
-    background: url('https://images.unsplash.com/photo-1549692520-acc6669e2f0c?auto=format&fit=crop&w=1900&q=80') center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(2px);
-  }
-  .content {
-    position: relative;
-    z-index: 2;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(15px);
-    padding: 40px 60px;
-    border-radius: 20px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.5);
-    max-width: 800px;
-  }
-  .langs {
-    margin-bottom: 20px;
-  }
-  .langs a {
-    text-decoration: none;
-    color: #fff;
-    background: rgba(255,255,255,0.15);
-    padding: 6px 14px;
-    border-radius: 20px;
-    margin: 0 5px;
-    transition: 0.3s;
-  }
-  .langs a:hover {
-    background: #ff4d6d;
-  }
-  .logo {
-    font-size: 26px;
-    font-weight: 700;
-    color: #fff;
-  }
-  .title {
-    font-size: 42px;
-    font-weight: 700;
-    color: #ff4d6d;
-    margin-top: 20px;
-  }
-  .subtitle {
-    font-size: 18px;
-    margin-top: 10px;
-    color: #f1f1f1;
-  }
-  .info {
-    margin-top: 25px;
-    background: rgba(0,0,0,0.4);
-    border: 1px solid rgba(255,255,255,0.2);
-    padding: 15px 20px;
-    border-radius: 10px;
-  }
-  .info h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-  .info span {
-    font-size: 14px;
-    color: #ddd;
-  }
-  @media (max-width: 768px) {
-    .content {
-      padding: 30px 20px;
-    }
-    .title {
-      font-size: 32px;
-    }
-  }
-
-
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -108,950 +12,384 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fef5e7 0%, #fdebd3 25%, #fce8d0 50%, #fbe7d1 75%, #fff8f0 100%);
+            min-height: 100vh;
+            color: #2c4251;
         }
 
-        .notext {
-            position: absolute;
-            left: -9999px;
-        }
-
-        #wrapper {
-            max-width: 100%;
-            background: white;
-        }
-
-        /* Header Styles */
-        #kli_top {
-            background: #fff;
-            border-bottom: 3px solid #004c97;
-        }
-
-        #kli_lang_area {
-            text-align: right;
-            padding: 10px 20px;
-            font-size: 13px;
-            background: #f8f8f8;
-        }
-
-        #kli_lang_area a {
-            color: #666;
-            text-decoration: none;
-        }
-
-        #kli_top_logo_area {
-            padding: 20px;
-            background: white;
-        }
-
-        #kli_top_logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #004c97;
-        }
-
-        #kli_subtitle_area {
-            background: #004c97;
-            color: white;
-            padding: 30px 20px;
-        }
-
-        #kli_subtitle_area h3 {
-            font-size: 28px;
-            margin: 0;
-        }
-
-        #kli_subtitle_area span {
-            font-size: 14px;
-            font-weight: normal;
-        }
-
-        /* Menu Styles */
-        #kli_menu {
-            background: #f0f0f0;
-            border-bottom: 1px solid #ddd;
-        }
-
-        #kli_menu_area {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .kli_menu_contents {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .kli_menu_contents li {
-            flex: 1;
-            min-width: 150px;
-        }
-
-        .kli_menu_contents a {
-            display: block;
-            padding: 15px 20px;
-            text-decoration: none;
-            color: #666;
+        header {
+            background: 
+                linear-gradient(135deg, rgba(20, 30, 48, 0.75) 0%, rgba(44, 66, 81, 0.85) 100%),
+                url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 5rem 2rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
             text-align: center;
-            border-right: 1px solid #ddd;
-        }
-
-        .kli_menuliston a {
-            background: #004c97;
-            color: white !important;
-            font-weight: bold;
-        }
-
-        .kli_menulist a:hover {
-            background: #e8e8e8;
-        }
-
-        /* Content Area */
-        #kli_mid_bottom {
-            background: white;
-        }
-
-        #kli_contents {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        #contentsarea {
-            background: white;
-        }
-
-        #contentsarea > ul {
-            list-style-position: inside;
-            margin-bottom: 30px;
-        }
-
-        #contentsarea > ul > li {
-            margin: 15px 0;
-            line-height: 1.8;
-        }
-
-        /* Collapsible Headers */
-        .cheader {
-            background: #f5f5f5;
-            border: 1px solid #ddd;
-            margin-bottom: 5px;
-        }
-
-        .cheaderon {
-            background: #e8f4ff;
-            border-color: #004c97;
-        }
-
-        .citem {
-            display: block;
-            padding: 18px 20px;
-            color: #333;
-            text-decoration: none;
-            font-size: 16px;
             position: relative;
-            font-weight: bold;
-            cursor: pointer;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .citemon {
-            color: #004c97;
-        }
-
-        .btn_cplus, .btn_cminus {
+        header::before {
+            content: '';
             position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 20px;
-            height: 20px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(44, 66, 81, 0.3) 0%, rgba(20, 30, 48, 0.6) 100%);
+            z-index: 0;
         }
 
-        .btn_cplus::before {
-            content: "+";
-            font-size: 24px;
-            color: #666;
-        }
-
-        .btn_cminus::before {
-            content: "−";
-            font-size: 24px;
-            color: #004c97;
-        }
-
-        .citemans {
-            padding: 30px;
-            background: white;
-        }
-
-        .citemans ul {
-            list-style-position: inside;
-            margin: 15px 0;
-        }
-
-        .citemans li {
-            margin: 10px 0;
-            line-height: 1.8;
-        }
-
-        .citemans h3 {
-            color: #004c97;
-            margin: 20px 0 10px 0;
-        }
-
-        .citemans hr {
-            margin: 30px 0;
-            border: none;
-            border-top: 1px solid #ddd;
-        }
-
-        /* Table Styles */
-        .tableOver {
-            overflow-x: auto;
-            margin: 20px 0;
-        }
-
-        .contentsTable {
-            width: 100%;
-            border-collapse: collapse;
-            border: 1px solid #ddd;
-            background: white;
-        }
-
-        .contentsTable th {
-            background: #004c97;
-            color: white;
-            padding: 12px;
-            text-align: center;
-            font-weight: 600;
-            border: 1px solid #003d7a;
-            font-size: 14px;
-        }
-
-        .contentsTable td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            text-align: center;
-            font-size: 13px;
-        }
-
-        .contentsTable td.bg {
-            background: #f5f5f5;
-            font-weight: bold;
-        }
-
-        /* Footer */
-        #kli_bottom {
-            background: #2c2c2c;
-            color: #acacac;
-            padding: 40px 20px;
-            margin-top: 50px;
-        }
-
-        #kli_bottom_area {
+        .header-content {
+            position: relative;
+            z-index: 1;
             max-width: 1200px;
             margin: 0 auto;
-            text-align: center;
         }
 
-        #kli_bottom_area .itemlist {
-            list-style: none;
+        .logo-display {
+            margin-bottom: 3rem;
+            animation: fadeIn 1s ease-in;
         }
 
-        #kli_website_area {
+        .logo-display svg {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 1.5rem;
+            filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
+        }
+
+        .brand-name {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .brand-tagline {
+            font-size: 1.5rem;
+            color: #ff6b8a;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo-text {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .logo-accent {
+            color: #e07856;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            color: #ff6b8a;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: white;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .hero-features {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-cta {
+            font-size: 1rem;
+            color: white;
+            font-weight: 500;
+        }
+
+        nav {
             max-width: 1200px;
-            margin: 0 auto 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #555;
-        }
-
-        #kli_website_area .itemlist {
-            list-style: none;
+            margin: 3rem auto 0;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
+            align-items: center;
+            gap: 3rem;
         }
 
-        #kli_website_area a {
-            color: #acacac;
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
             text-decoration: none;
-            font-size: 13px;
-        }
-
-        #kli_website_area a:hover {
             color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 1.1rem;
         }
 
-        .page-content {
-            display: none;
+        nav a:hover {
+            color: #ff6b8a;
         }
 
-        .page-content.active {
-            display: block;
+        .content-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 3rem 2rem;
+        }
+
+        .logo-container {
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .logo-container img {
+            max-width: 250px;
+            height: auto;
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #2c4251;
+            margin-bottom: 1rem;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #5a7184;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: #e07856;
+            font-weight: 600;
+            margin-bottom: 3rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid rgba(224, 120, 86, 0.1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(224, 120, 86, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: #2c4251;
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+
+        .feature-card p {
+            color: #5a7184;
+            line-height: 1.6;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #e07856 0%, #d66b4f 100%);
+            padding: 3rem 2rem;
+            border-radius: 30px;
+            text-align: center;
+            margin: 3rem auto;
+            max-width: 900px;
+            box-shadow: 0 12px 40px rgba(224, 120, 86, 0.3);
+        }
+
+        .cta-section h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: white;
+            color: #e07856;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #5a7184;
+            margin-top: 4rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @media (max-width: 768px) {
-            .kli_menu_contents {
-                flex-direction: column;
+            h1 {
+                font-size: 2rem;
             }
 
-            .kli_menu_contents li {
-                width: 100%;
+            .subtitle {
+                font-size: 1.1rem;
             }
 
-            .kli_menu_contents a {
-                border-right: none;
-                border-bottom: 1px solid #ddd;
-            }
-
-            #kli_contents {
-                padding: 20px 10px;
-            }
-
-            .citemans {
-                padding: 15px;
-            }
-
-            .contentsTable {
-                font-size: 12px;
-            }
-
-            .contentsTable th, .contentsTable td {
-                padding: 8px 4px;
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
             }
         }
     </style>
-    <script>
-        function toggleSection(id) {
-            const content = document.getElementById('c_' + id);
-            const button = document.getElementById('c_button_' + id);
-            const header = document.getElementById('c_header_' + id);
-            const headerDiv = document.getElementById('c_header_div_' + id);
-            
-            if (content.style.display === 'none' || content.style.display === '') {
-                content.style.display = 'block';
-                button.className = 'btn_cminus';
-                header.className = 'citem citemon';
-                headerDiv.className = 'cheaderon';
-            } else {
-                content.style.display = 'none';
-                button.className = 'btn_cplus';
-                header.className = 'citem';
-                headerDiv.className = 'cheader';
-            }
-            return false;
-        }
-
-        function showPage(pageId) {
-            // Hide all pages
-            const pages = document.querySelectorAll('.page-content');
-            pages.forEach(page => page.classList.remove('active'));
-            
-            // Show selected page
-            document.getElementById(pageId).classList.add('active');
-            
-            // Update menu active state
-            const menuItems = document.querySelectorAll('.kli_menu_contents li');
-            menuItems.forEach(item => {
-                item.classList.remove('kli_menuliston');
-                item.classList.add('kli_menulist');
-            });
-            
-            event.target.parentElement.classList.remove('kli_menulist');
-            event.target.parentElement.classList.add('kli_menuliston');
-            
-            return false;
-        }
-    </script>
 </head>
-
 <body>
-    <h1 class="notext">SeoulMate Korean Language Institute</h1>
-    
-    <div id="wrapper">
-        <section class="hero">
-  <div class="content">
-    <div class="logo">SeoulMate Korean Language Institute</div>
-    <div class="title">Course Information</div>
-    <div class="subtitle">KOREAN LANGUAGE INSTITUTE — Learn the language, live the culture</div>
-    <div class="info">
-      <h3>Small groups • Native instructors • Flexible schedules</h3>
-      <span>Enroll now — limited seats available</span>
-    </div>
-  </div>
-</section>
-        
-        <div id="kli_menu" class="sub01">
-            <div id="kli_menu_area">
-                <ul class="kli_menu_contents sub01">
-                    <li class="kli_menuliston"><a href="javascript:void(0);" onclick="showPage('page-regular')" title="Regular Program">Regular Program</a></li>
-                    <li class="kli_menulist"><a href="javascript:void(0);" onclick="showPage('page-university')" title="The University Korean Program">The University Korean Program</a></li>
-                    <li class="kli_menulist"><a href="javascript:void(0);" onclick="showPage('online-global')" title="Online Global Korean Program">Online Global Korean Program</a></li>
-                    <li class="kli_menulist"><a href="#" title="Summer Special Program">Summer Special Program</a></li>
-                    <li class="kli_menulist"><a href="#" title="3-Week Program">3-Week Program</a></li>
-                    <li class="kli_menulist"><a href="#" title="Advanced Korean Program">Advanced Korean Program</a></li>
+    <header>
+        <div class="header-content">
+            <div class="logo-display">
+                <svg viewBox="0 0 200 200" style="width: 180px; height: 180px;">
+                    <!-- Traditional Korean roof -->
+                    <path d="M 30 80 Q 30 70, 40 70 L 90 70 Q 100 70, 100 60 Q 100 70, 110 70 L 160 70 Q 170 70, 170 80 L 165 85 L 35 85 Z" 
+                          fill="#2c4251" stroke="#2c4251" stroke-width="2"/>
+                    
+                    <!-- House structure -->
+                    <rect x="45" y="85" width="110" height="80" fill="none" stroke="#2c4251" stroke-width="3"/>
+                    
+                    <!-- Heart - split into two colors -->
+                    <path d="M 100 105 Q 85 95, 75 105 Q 70 115, 75 125 L 100 145" 
+                          fill="#2c4251" stroke="none"/>
+                    <path d="M 100 105 Q 115 95, 125 105 Q 130 115, 125 125 L 100 145" 
+                          fill="#e07856" stroke="none"/>
+                    
+                    <!-- Open book at bottom -->
+                    <path d="M 60 150 L 100 140 L 140 150 L 140 165 L 100 155 L 60 165 Z" 
+                          fill="none" stroke="#2c4251" stroke-width="2"/>
+                    <line x1="100" y1="140" x2="100" y2="155" stroke="#2c4251" stroke-width="2"/>
+                </svg>
+                
+                <h1 class="brand-name">Seoulmate</h1>
+                <p class="brand-tagline">Language & Culture</p>
+            </div>
+            
+            <div class="logo-text">Seoul<span class="logo-accent">Mate</span> Korean Language Institute</div>
+            <h1 class="hero-title">Course Information</h1>
+            <p class="hero-subtitle">KOREAN LANGUAGE INSTITUTE — Learn the language, live the culture</p>
+            <p class="hero-features">Small groups • Native instructors • Flexible schedules</p>
+            <p class="hero-cta">Enroll now — limited seats available</p>
+            
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
-        
-        <div id="kli_mid_bottom">
-            <div id="kli_contents">
-                <!-- Regular Program Page -->
-                <div id="page-regular" class="page-content active">
-                    <div id="contentsarea">
-                        <ul>
-                            <li><strong>The Regular Program</strong> at SeoulMate is designed for foreigners and overseas Koreans interested in learning the Korean language and culture. It is suitable for those planning to enter universities or graduate schools in Korea, seeking employment, or studying for leisure.</li>
-                            <li>Student Demographics: An average of 1,700 students from around 60 countries enroll each semester.</li>
-                            <li>Classes align with the levels of the Korean Language Proficiency Test (TOPIK). Starting from Level 1, it takes approximately 1 year and 6 months to complete all 6 levels up to Level 6.</li>
-                            <li><strong>Course Structure</strong>: The Regular program consists of a <strong>10-week course</strong> per semester, totaling <strong>200 hours</strong>, offered across <strong>4 semesters annually</strong>.</li>
-                            <li><strong>Class Schedule</strong>:<br><span style="color: #0000ff;"><strong>- Morning Course</strong>: Monday to Friday, <strong>9:00 AM - 1:00 PM</strong></span><br><span style="color: #0000ff;"><strong>- Afternoon Course</strong>: Monday to Friday, <strong>2:00 PM - 5:50 PM</strong></span></li>
-                            <li><strong>Application Fee</strong> (<span style="color: #ff0000;">Non-refundable</span>): <strong>100,000 KRW</strong></li>
-                            <li><strong>Tuition Fee (per semester)</strong>: <strong>1,860,000 KRW</strong></li>
-                        </ul>
+    </header>
 
-                        <ul style="width:100%; margin:0; padding:0; border:0; list-style: none;">
-                            <li id="c_header_div_1" class="cheader">
-                                <a href="javascript:void(0);" id="c_header_1" onclick="return toggleSection(1);" class="citem">
-                                    <b>Eligibility and Application Procedure</b>
-                                    <span id="c_button_1" class="btn_cplus"></span>
-                                </a>
-                                <ul id="c_1" style="width:100%; margin:0; padding:0; border:0; list-style: none; display:none;">
-                                    <li class="citemans">
-                                        <ul>
-                                            <li><strong>Eligibility</strong>: <strong>Applicants must have at least a High School Diploma.</strong><br>
-                                            - GED and homeschooling certificates are not accepted.<br>
-                                            - Those expected to graduate high school cannot apply.<br>
-                                            - Submission of a temporary graduation certificate is not accepted.</li>
-                                        </ul>
-                                        <hr>
-                                        <ul>
-                                            <li><strong>Application Procedure</strong>
-                                                <p><strong>1. Submit Online Application:</strong> Upload a scanned copy of your passport and final academic certificate<br>
-                                                - <strong>Online submission ONLY</strong> (<span style="color: #0000ff;">phone or in-person submission not accepted</span>)<br>
-                                                - SeoulMate Korean Language Institute Academic System</p>
-                                                <p><strong>2. Application Fee Payment (<span style="color: #ff0000;">Non-refundable</span>)</strong></p>
-                                                <p><strong>3. Document Submission (<span style="color: #ff0000;">Strictly observe the application deadline</span>)</strong><br>
-                                                - <strong>D-4 Visa Applicants:</strong> Submit required documents by post<br>
-                                                - <strong>Non D-4 Applicants:</strong> No document submission required</p>
-                                                <p><strong>4. (Admitted Students) Tuition Payment & Registration</strong><br>
-                                                - <strong>D-4 Visa Applicants:</strong> Pay tuition for a minimum of 2 semesters<br>
-                                                - <strong>Non D-4 Applicants:</strong> Registration completed upon tuition payment</p>
-                                                <p><strong>5. (D-4 Visa Applicants only) Visa Document Issuance</strong><br>
-                                                - 'Certificate of Admission' issued after tuition payment confirmation<br>
-                                                - Apply for D-4 visa at the Korean embassy in your home country and enter Korea</p>
-                                            </li>
-                                        </ul>
-                                        <hr>
-                                        <ul>
-                                            <li><strong>Contacts by Nationality:</strong>
-                                                <ul>
-                                                    <li><strong>English-Speaking Countries (Americas, Europe, Africa, and Oceania):</strong> seoulmate-ssp@seoulmate.ac.kr</li>
-                                                    <li><strong>Asia (Asia, the Middle East, Hong Kong, Macau, Taiwan):</strong> seoulmate@seoulmate.ac.kr</li>
-                                                    <li><strong>China (Mainland China):</strong> seoulmate-cn@seoulmate.ac.kr</li>
-                                                    <li><strong>Korea, Japan:</strong> seoulmate-jp@seoulmate.ac.kr</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
+    <main>
+        <section class="content-section">
 
-                            <li id="c_header_div_2" class="cheader">
-                                <a href="javascript:void(0);" id="c_header_2" onclick="return toggleSection(2);" class="citem">
-                                    <b>Academic Schedule</b>
-                                    <span id="c_button_2" class="btn_cplus"></span>
-                                </a>
-                                <ul id="c_2" style="width:100%; margin:0; padding:0; border:0; list-style: none; display:none;">
-                                    <li class="citemans">
-                                        <p style="text-align: center;"><strong>2025 Academic Schedule (Korean Standard Time)</strong></p>
-                                        <div class="tableOver">
-                                            <table class="contentsTable">
-                                                <tbody>
-                                                    <tr>
-                                                        <th><strong>Semester</strong></th>
-                                                        <th><strong>Application Period<br>(For New Students)</strong></th>
-                                                        <th><strong>Tuition Payment Deadline</strong></th>
-                                                        <th><strong>Placement Test<br>(in-person)</strong></th>
-                                                        <th><strong>Orientation<br>(in-person)</strong></th>
-                                                        <th><strong>Class Begins</strong></th>
-                                                        <th><strong>Class Ends</strong></th>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="bg"><strong>Fall</strong></td>
-                                                        <td>Jun. 11 ~ Jul. 29, 5:00PM</td>
-                                                        <td>Jul. 29</td>
-                                                        <td>Aug. 27</td>
-                                                        <td>Aug. 29</td>
-                                                        <td>Sep. 1</td>
-                                                        <td>Nov. 14</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="bg"><strong>Winter</strong></td>
-                                                        <td>Sep. 8 ~ Oct. 24, 5:00PM</td>
-                                                        <td>Oct. 24</td>
-                                                        <td>Nov. 26</td>
-                                                        <td>Nov. 28</td>
-                                                        <td>Dec. 1</td>
-                                                        <td>Feb. 10, 2026</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <p>※ The placement test schedule for the 2025 Summer Semester has been changed from June 3 to June 2 due to the presidential election.</p>
-
-                                        <p style="text-align: center; margin-top: 40px;"><strong>2026 Academic Schedule (Korean Standard Time)</strong></p>
-                                        <div class="tableOver">
-                                            <table class="contentsTable">
-                                                <tbody>
-                                                    <tr>
-                                                        <th><strong>Semester</strong></th>
-                                                        <th><strong>Application Period<br>(For New Students)</strong></th>
-                                                        <th><strong>Tuition Payment Deadline</strong></th>
-                                                        <th><strong>Placement Test<br>(in-person)</strong></th>
-                                                        <th><strong>Orientation<br>(in-person)</strong></th>
-                                                        <th><strong>Class Begins</strong></th>
-                                                        <th><strong>Class Ends</strong></th>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="bg"><strong>Spring</strong></td>
-                                                        <td>Dec. 8, 2025 ~ Jan. 23, 2026, 5:00PM</td>
-                                                        <td>Jan. 23</td>
-                                                        <td>Mar. 3</td>
-                                                        <td>Mar. 5</td>
-                                                        <td>Mar. 6</td>
-                                                        <td>May. 18</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="bg"><strong>Summer</strong></td>
-                                                        <td>Mar. 9 ~ Apr. 24, 5:00PM</td>
-                                                        <td>Apr. 24</td>
-                                                        <td>Jun. 1</td>
-                                                        <td>Jun. 4</td>
-                                                        <td>Jun. 5</td>
-                                                        <td>Aug. 14</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="bg"><strong>Fall</strong></td>
-                                                        <td>Jun. 8 ~ Jul. 24, 5:00PM</td>
-                                                        <td>Jul. 24</td>
-                                                        <td>Aug. 27</td>
-                                                        <td>Aug. 31</td>
-                                                        <td>Sep. 1</td>
-                                                        <td>Nov. 13</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="bg"><strong>Winter</strong></td>
-                                                        <td>Sep. 7 ~ Oct. 23, 5:00PM</td>
-                                                        <td>Oct. 23</td>
-                                                        <td>Nov. 26</td>
-                                                        <td>Nov. 30</td>
-                                                        <td>Dec. 1</td>
-                                                        <td>Feb. 12, 2027</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Small Groups</h3>
+                    <p>Intimate class sizes ensure personalized attention and rapid progress in your Korean learning journey.</p>
                 </div>
 
-                <!-- University Korean Program Page -->
-                <div id="page-university" class="page-content">
-                    <div id="contentsarea">
-                        <ul>
-                            <li><strong>The University Korean Program</strong> is tailored for international students currently enrolled in a Korean university or those intending to pursue undergraduate or graduate studies in Korea.</li>
-                            <li>The program emphasizes intensive academic Korean language skills and follows the same academic calendar as regular university courses. Classes are held exclusively in the afternoons.</li>
-                            <li><strong>Course Structure</strong>: The program is delivered in a <strong>10-week semester format</strong>, totaling <strong>200 hours</strong> per semester, and operates across <strong>4 semesters per year</strong>.</li>
-                            <li><span style="color: #0000ff;"><strong>Class Schedule</strong>: Monday to Friday, <strong>2:00 PM - 5:50 PM</strong>.</span></li>
-                            <li><strong>Application Fee</strong> (<span style="color: #ff0000;">Non-refundable</span>): <strong>100,000 KRW</strong></li>
-                            <li><strong>Tuition Fee (per semester)</strong>: <strong>2,020,000 KRW</strong></li>
-                        </ul>
-
-                        <ul style="width:100%; margin:0; padding:0; border:0; list-style: none;">
-                            <li id="c_header_div_u1" class="cheader">
-                                <a href="javascript:void(0);" id="c_header_u1" onclick="return toggleSection('u1');" class="citem">
-                                    <b>Eligibility and Application Procedure</b>
-                                    <span id="c_button_u1" class="btn_cplus"></span>
-                                </a>
-                                <ul id="c_u1" style="width:100%; margin:0; padding:0; border:0; list-style: none; display:none;">
-                                    <li class="citemans">
-                                        <ul>
-                                            <li><strong>Eligibility</strong>: <strong>Applicants must have at least a High School Diploma.</strong><br>
-                                            - GED and homeschooling certificates are not accepted.<br>
-                                            - Those expected to graduate high school cannot apply.<br>
-                                            - Submission of a temporary graduation certificate is not accepted.</li>
-                                        </ul>
-                                        <hr>
-                                        <ul>
-                                            <li><strong>Application Procedure</strong>
-                                                <p><strong>1. Submit Online Application:</strong> Upload a scanned copy of your passport and final academic certificate<br>
-                                                - <strong>Online submission ONLY</strong> (<span style="color: #0000ff;">phone or in-person submission not accepted</span>)<br>
-                                                - SeoulMate Korean Language Institute Academic System</p>
-                                                <p><strong>2. Application Fee Payment (<span style="color: #ff0000;">Non-refundable</span>)</strong></p>
-                                                <p><strong>3. Document Submission (<span style="color: #ff0000;">Strictly observe the application deadline</span>)</strong><br>
-                                                - <strong>D-4 Visa Applicants:</strong> Submit required documents by post<br>
-                                                - <strong>Non D-4 Applicants:</strong> No document submission required</p>
-                                                <p><strong>4. (Admitted Students) Tuition Payment & Registration</strong><br>
-                                                - <strong>D-4 Visa Applicants:</strong> Pay tuition for a minimum of 2 semesters<br>
-                                                - <strong>Non D-4 Applicants:</strong> Registration completed upon tuition payment</p>
-                                                <p><strong>5. (D-4 Visa Applicants only) Visa Document Issuance</strong><br>
-                                                - 'Certificate of Admission' issued after tuition payment confirmation<br>
-                                                - Apply for D-4 visa at the Korean embassy in your home country and enter Korea</p>
-                                            </li>
-                                        </ul>
-                                        <hr>
-                                        <ul>
-                                            <li><strong>Contacts by Nationality:</strong>
-                                                <ul>
-                                                    <li><strong>English-Speaking Countries (Americas, Europe, Africa, and Oceania):</strong> seoulmate-ssp@seoulmate.ac.kr</li>
-                                                    <li><strong>Asia (Asia, the Middle East, Hong Kong, Macau, Taiwan):</strong> seoulmate@seoulmate.ac.kr</li>
-                                                    <li><strong>China (Mainland China):</strong> seoulmate-cn@seoulmate.ac.kr</li>
-                                                    <li><strong>Korea, Japan:</strong> seoulmate-jp@seoulmate.ac.kr</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li id="c_header_div_u2" class="cheader">
-                                <a href="javascript:void(0);" id="c_header_u2" onclick="return toggleSection('u2');" class="citem">
-                                    <b>Academic Schedule</b>
-                                    <span id="c_button_u2" class="btn_cplus"></span>
-                                </a>
-                                <ul id="c_u2" style="width:100%; margin:0; padding:0; border:0; list-style: none; display:none;">
-                                    <li class="citemans">
-                                        <p style="text-align: center;"><strong>2025 Academic Schedule (Korean Standard Time)</strong></p>
-                                        <div class="tableOver">
-                                            <table class="contentsTable">
-                                                <tbody>
-                                                    <tr>
-                                                        <th><strong>Semester</strong></th>
-                                                        <th><strong>Application Period<br>(For New Students)</strong></th>
-                                                        <th><strong>Tuition Payment Deadline</strong></th>
-                                                        <th><strong>Placement Test<br>(in-person)</strong></th>
-                                                        <th><strong>Orientation<br>(in-person)</strong></th>
-                                                        <th><strong>Class Begins</strong></th>
-                                                        <th><strong>Class Ends</strong></th>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="bg"><strong>Fall</strong></td>
-                                                        <td>Jun. 11 ~ Jul. 29, 5:00PM</td>
-                                                        <td>Jul. 29</td>
-                                                        <td>Aug. 27, 09:30AM</td>
-                                                        <td>Aug. 29, 3:00PM</td>
-                                                        <td>Sep. 1</td>
-                                                        <td>Nov. 14</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="bg"><strong>Winter</strong></td>
-                                                        <td>Sep. 8 ~ Oct. 24, 5:00PM</td>
-                                                        <td>Oct. 24</td>
-                                                        <td>Nov. 26, 09:30AM</td>
-                                                        <td>Nov. 28, 3:00PM
-                                                        <td>Sep. 1</td>
-                                                        <td>Nov. 14</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-
-                                    </li>
-                                </ul>
-                            </li>   
-                        </ul>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Native Instructors</h3>
+                    <p>Learn from experienced native Korean speakers who bring authentic language and cultural insights.</p>
                 </div>
 
-<div id="online-global" class="page-content">
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Flexible Schedules</h3>
+                    <p>Choose from morning, evening, and weekend classes that fit your busy lifestyle.</p>
+                </div>
 
-    <div id="kli_mid_bottom" onmouseover="Javascript: showSub('0', 'N');" onblur="Javascript: showSub('0', 'N');">
-			<div id="kli_contents">
-				<div id="contentsarea">
-					<ul>
-<li><strong>The</strong> <strong>Online Global Korean Program</strong> is designed for students who find it difficult to attend face-to-face classes at the KLI during the day due to&nbsp; work or personal reasons, as well as for those residing abroad.</li>
-<li><strong>Schedule</strong>: Three days a week (<span style="color: #0000ff;"><strong>Mon, Tue, Thu</strong></span>) for a <strong>10-week</strong> semester, totaling<strong> 90 hours</strong> per semester</li>
-<li><strong>Levels</strong>: 8 levels (Level 1 to Level 8)<br><span style="color: #000000;">(Since the classes are determined based on the results of the class placement test each semester, some classes may not be offered.)</span></li>
-<li><strong>Class Time</strong>:<span style="color: #0000ff;"> <strong>6:30 PM - 9:05 PM (<strong><span>Fully online via Zoom)</span></strong></strong></span></li>
-<li><strong>Application Fee&nbsp;(<span style="color: #ff0000;">non-refundable</span>)&nbsp;:&nbsp;&nbsp;100,000KRW</strong></li>
-<li><strong>Tuition Fee(Per semester):&nbsp;960,000KRW</strong></li>
-<li><strong>Visa</strong>: <strong><span style="color: #ff0000;">Visa issuance or extension is NOT available for this course</span>.</strong></li>
-</ul>		<ul style="width:100%; margin:0; padding:0; border:0; list-style: none;">
-						<li id="c_header_div_1" class="cheader" style="margin:0; padding:0; border:0; list-style: none;"><a href="#" id="c_header_1" onclick="Javascript: $('#c_1').slideToggle(300); $('#c_button_1').toggleClass('btn_cplus btn_cminus'); $('#c_header_1').toggleClass('citem citemon'); $('#c_header_div_1').toggleClass('cheader cheaderon');  return false;" class="citem"><b>Academic Schedule</b> <span id="c_button_1" class="btn_cplus"></span></a>
-					<ul id="c_1" style="width:100%; margin:0; padding:0; border:0; list-style: none; display:none;">
-						<li class="citemans">
-							<p style="text-align: center;"><strong style="font-size: medium;">2025 Academic Schedule (subject to change, Korean Standard Time)</strong></p>
-<div class="tableOver"><table class="contentsTable" style="height: 212px;" width="100%">
-<tbody>
-<tr><th rowspan="2"><strong>2025</strong></th><th rowspan="2"><strong>Application Period&nbsp;<strong>(-17:00)</strong></strong></th><th rowspan="2"><strong>Payment Deadline (-17:00)</strong></th><th rowspan="2">
-<p><strong>Placement Test</strong><br><strong>(18:30)</strong></p>
-</th><th colspan="2"><strong>Monday/Tuesday/Thursday</strong></th></tr>
-<tr><th><strong>Begins</strong></th><th><strong>Ends</strong></th></tr>
-<tr>
-<td class="bg"><strong>Spring</strong></td>
-<td>Nov. 11, 2024 ~ Feb. 7, 2025</td>
-<td>Feb. 7</td>
-<td>Mar. 4</td>
-<td>Mar. 6</td>
-<td>May. 20</td>
-</tr>
-<tr>
-<td class="bg"><strong>Summer</strong></td>
-<td>Feb. 10 ~ May. 9</td>
-<td>May. 9</td>
-<td>Jun. 5</td>
-<td>Jun. 9</td>
-<td>Aug. 18</td>
-</tr>
-<tr>
-<td class="bg"><strong>Fall</strong></td>
-<td>May. 12 ~ Aug. 8</td>
-<td>Aug. 8</td>
-<td>Aug.28&nbsp;</td>
-<td>Sep. 1</td>
-<td>Nov. 13</td>
-</tr>
-<tr>
-<td class="bg"><strong>Winter</strong></td>
-<td>Aug. 11 ~ Nov. 7</td>
-<td>Nov. 7</td>
-<td>Nov. 27</td>
-<td>Dec.1, 2025</td>
-<td>Feb. 10, 2026</td>
-</tr>
-</tbody>
-</table></div>
-<p style="text-align: center;"><br>&nbsp;<span style="font-size: medium;"><strong>2026 Academic Schedule (subject to change, Korean Standard Time)</strong></span></p>
-<div class="tableOver"><table class="contentsTable" style="height: 212px;" width="100%">
-<tbody>
-<tr><th rowspan="2"><strong>2026</strong></th><th rowspan="2"><strong>Application Period&nbsp;<strong>(-17:00)</strong></strong></th><th rowspan="2"><strong>Payment Deadline (-17:00)</strong></th><th rowspan="2">
-<p><strong>Placement Test</strong><br><strong>(18:30)</strong></p>
-</th><th colspan="2"><strong>Monday/Tuesday/Thursday</strong></th></tr>
-<tr><th><strong>Begins</strong></th><th><strong>Ends</strong></th></tr>
-<tr>
-<td class="bg"><strong>Spring</strong></td>
-<td>Dec. 8, 2025 ~ Jan. 16, 2025</td>
-<td>Jan. 23</td>
-<td>Mar. 3</td>
-<td>Mar. 9</td>
-<td>May. 18</td>
-</tr>
-<tr>
-<td class="bg"><strong>Summer</strong></td>
-<td>Mar. 9 ~ Apr. 17</td>
-<td>Apr. 24</td>
-<td>Jun. 2</td>
-<td>Jun. 8</td>
-<td>Aug. 13</td>
-</tr>
-<tr>
-<td class="bg"><strong>Fall</strong></td>
-<td>Jun. 8 ~ Jul. 17</td>
-<td>Jul. 24</td>
-<td>Aug. 27</td>
-<td>Sep. 1</td>
-<td>Nov. 12</td>
-</tr>
-<tr>
-<td class="bg"><strong>Winter</strong></td>
-<td>Sep. 7 ~ Oct. 16</td>
-<td>Oct. 23</td>
-<td>Nov. 26</td>
-<td>Dec.1, 2026</td>
-<td>Feb. 11, 2027</td>
-</tr>
-</tbody>
-</table></div>													</li>
-					</ul>
-				</li>
-								<li id="c_header_div_2" class="cheader" style="margin:0; padding:0; border:0; list-style: none;"><a href="#" id="c_header_2" onclick="Javascript: $('#c_2').slideToggle(300); $('#c_button_2').toggleClass('btn_cplus btn_cminus'); $('#c_header_2').toggleClass('citem citemon'); $('#c_header_div_2').toggleClass('cheader cheaderon');  return false;" class="citem"><b>Eligibility</b> <span id="c_button_2" class="btn_cplus"></span></a>
-					<ul id="c_2" style="width:100%; margin:0; padding:0; border:0; list-style: none; display:none;">
-						<li class="citemans">
-							<ul>
-<li><strong>Eligibility:</strong> Applicants must have at least a high school diploma</li>
-<li><strong>Required Documents</strong><ol>
-<li>Copy of passport</li>
-<li>Certificate of graduation from the last school attended or a certificate of enrollment <br>-If the documents are not in English or Korean, a translated version is required</li>
-<li>Application Fee Payment<br>※ Documents uploaded to the online application must be in jpg or pdf format <br>※ Document review begins once the online document submission and application fee payment are confirmed.</li>
-</ol></li>
-<li>
-<p><strong>Contact:&nbsp;</strong><a style="font-style: italic;" rel="noopener">ysklissp@yonsei.ac.kr</a></p>
-</li>
-</ul>													</li>
-					</ul>
-				</li>
-								<li id="c_header_div_3" class="cheader" style="margin:0; padding:0; border:0; list-style: none;"><a href="#" id="c_header_3" onclick="Javascript: $('#c_3').slideToggle(300); $('#c_button_3').toggleClass('btn_cplus btn_cminus'); $('#c_header_3').toggleClass('citem citemon'); $('#c_header_div_3').toggleClass('cheader cheaderon');  return false;" class="citem"><b>Application Fee &amp; Tuition Payment Guide</b> <span id="c_button_3" class="btn_cplus"></span></a>
-					<ul id="c_3" style="width:100%; margin:0; padding:0; border:0; list-style: none; display:none;">
-						<li class="citemans">
-							<ul>
-<li><strong>Application Fee <span style="color: #0000ff;"><span style="color: #ff0000;">(non-refundable)</span> </span>:&nbsp;&nbsp;100,000KRW</strong></li>
-<li><strong>Tuition Fee<span style="color: #0000ff;">(Per semester)</span><span style="color: #0000ff;"><span style="color: #000000;">:&nbsp;<strong>960,000KRW</strong></span></span><span style="color: #0000ff;"><br></span></strong></li>
-<ul>
-<li>Textbook fees are separate</li>
-<li><span style="color: #0000ff;">If tution is increased, the additional amount must be paid.</span></li>
-<li>The student is responsible for any bank fees incurred during remittance. Any differences due to exchange rates must also be paid additionally.</li>
-</ul>
-</ul>
-<ul>
-<li>
-<p data-start="55" data-end="91"><strong data-start="69" data-end="89">Payment methods<br></strong>- Payment via Korean banks: Virtual account payment through<strong>&nbsp;Inicis (Pay in KRW)</strong><strong data-start="152" data-end="176"><br></strong>- Payment from overseas: Payment through&nbsp;<strong>Flywire</strong>&nbsp;<strong>(Pay in foreign currency)</strong></p>
-</li>
-</ul>
-<ul>
-<li><strong>Refund Policy <br>- Based on the date of submission of the refund application form</strong><br>- If requesting an international transfer, the amount excluding the transfer fee will be deposited.
-<div class="tableOver"><table class="contentsTable" width="100%">
-<tbody>
-<tr><th><strong>Period</strong></th><th><strong>Class Days (30 Days)</strong></th><th>
-<p><strong>Refund Amount</strong><strong>(2025)</strong></p>
-</th><th><strong>Refund %</strong></th></tr>
-<tr>
-<td class="bg"><strong>1/3</strong></td>
-<td>1 ~ 10</td>
-<td>640,320&nbsp;KRW</td>
-<td>66.7%</td>
-</tr>
-<tr>
-<td class="bg"><strong>1/2</strong></td>
-<td>11 ~ 15</td>
-<td>480,000&nbsp;KRW</td>
-<td>50%</td>
-</tr>
-<tr>
-<td class="bg"><strong>1/2~</strong></td>
-<td>16 ~ 30</td>
-<td>Non-refundable</td>
-<td>0%</td>
-</tr>
-</tbody>
-</table></div>
-</li>
-</ul>													</li>
-					</ul>
-				</li>
-								<li id="c_header_div_4" class="cheader" style="margin:0; padding:0; border:0; list-style: none;"><a href="#" id="c_header_4" onclick="Javascript: $('#c_4').slideToggle(300); $('#c_button_4').toggleClass('btn_cplus btn_cminus'); $('#c_header_4').toggleClass('citem citemon'); $('#c_header_div_4').toggleClass('cheader cheaderon');  return false;" class="citem"><b>Academic Regulations</b> <span id="c_button_4" class="btn_cplus"></span></a>
-					<ul id="c_4" style="width:100%; margin:0; padding:0; border:0; list-style: none; display:none;">
-						<li class="citemans">
-							<div class="flex max-w-full flex-col flex-grow">
-<div class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words [.text-message+&amp;]:mt-5" dir="auto" data-message-author-role="assistant" data-message-id="d227df06-136d-4bfe-8f70-ba536be09281" data-message-model-slug="gpt-4o-mini">
-<div class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]">
-<div class="markdown prose w-full break-words dark:prose-invert light">
-<ul>
-<li><strong>Placement Test</strong>: Students will take the placement test online.</li>
-<li><strong>Class Cancellation</strong>: If a class has fewer than five students, it will be cancelled.</li>
-<li><strong>Advancement Requirement</strong>: Students must attend at least 80% of the total class hours to advance to the next level.</li>
-<li><strong>Failure Policy</strong>:<span style="color: #ff0000;"> If a student fails the same level twice, they will not be allowed to continue courses at Yonsei Korean Language Institute.</span></li>
-<li><strong>Format</strong>: The exam, orientation, and classes will all be conducted online.</li>
-<li><strong>Orientation</strong>: Orientation will be held on the first day of class, followed by real-time online lessons via Zoom.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>													</li>
-					</ul>
-				</li>
-								<li id="c_header_div_5" class="cheader" style="margin:0; padding:0; border:0; list-style: none;"><a href="#" id="c_header_5" onclick="Javascript: $('#c_5').slideToggle(300); $('#c_button_5').toggleClass('btn_cplus btn_cminus'); $('#c_header_5').toggleClass('citem citemon'); $('#c_header_div_5').toggleClass('cheader cheaderon');  return false;" class="citem"><b>Learning content and Textbooks</b> <span id="c_button_5" class="btn_cplus"></span></a>
-					<ul id="c_5" style="width:100%; margin:0; padding:0; border:0; list-style: none; display:none;">
-						<li class="citemans">
-							<h3><strong>Level 1</strong></h3>
-<ul>
-<li><strong>Textbook</strong>:&nbsp;<span>Yonsei Korean in 3 Weeks 1</span></li>
-<li>You can fully learn Hangul and read and write.</li>
-<li>You know the basic pronunciation system and can accurately pronounce the initial, medial, and final sounds.</li>
-<li>You can understand and use the basic structure of the Korean language and tense expressions.</li>
-<li>You have the language skills necessary for basic daily life, such as greetings, self-introduction, and ordering food.</li>
-</ul>
-<hr>
-<h3><strong>Level 2</strong></h3>
-<ul>
-<li><strong>Textbook</strong>:&nbsp;<span>Yonsei Korean in 3 Weeks 2</span></li>
-<li>You can understand and use the basic structure of the Korean language, tense expressions, and sentence connection methods.</li>
-<li>You can understand and use descriptive forms, conjecture expressions, reason expressions, plan expressions, and sequential expressions.</li>
-<li>You have the language skills necessary for basic daily life, such as shopping, finding directions, using public transportation, and making phone calls.</li>
-</ul>
-<hr>
-<h3><strong>Level 3</strong></h3>
-<ul>
-<li><strong>Textbook</strong>:&nbsp;<span>Yonsei Korean in 3 Weeks 3</span></li>
-<li>You can accurately pronounce the individual sounds and phonetic rules of the Korean language in sentences.</li>
-<li>You can use vocabulary related to introductions, food, shopping, invitations, and transportation.</li>
-<li>You can use connected sentences and indirect sentences based on the simple sentences learned in Level 2.</li>
-<li>You can appropriately use honorifics and informal language according to the conversation situation.</li>
-</ul>
-<hr>
-<h3><strong>Level 4</strong></h3>
-<ul>
-<li><strong>Textbook</strong>:&nbsp;<span>Yonsei Korean in 3 Weeks 4</span></li>
-<li>You can accurately pronounce the individual sounds and phonetic rules of the Korean language in sentences.</li>
-<li>You can use vocabulary related to public institutions, phones, hospitals, travel, and household chores.</li>
-<li>You can use indirect speech appropriately according to the conversation situation.</li>
-<li>You can solve various problems encountered in daily life to some extent with the knowledge gained.</li>
-<li>You can understand the simple daily culture.</li>
-</ul>
-<hr>
-<h3><strong>Level 5</strong></h3>
-<ul>
-<li><strong>Textbook</strong>:&nbsp;<span>Yonsei Korean in 3 Weeks 5</span></li>
-<li>You develop communication skills that enable daily life in Korea.</li>
-<li>Through speaking practice such as storytelling, you learn to express your opinions correctly.</li>
-<li>You listen to and understand dialogues with relatively complex contexts and read texts that help understand Korean society and thought patterns, thereby expanding your vocabulary.</li>
-<li>You express your thoughts in prose through writing practice, enhancing the accuracy of grammar and vocabulary usage.</li>
-</ul>
-<hr>
-<h3><strong>Level 6</strong></h3>
-<ul>
-<li><strong>Textbook</strong>:&nbsp;<span>Yonsei Korean in 3 Weeks 6</span></li>
-<li>Based on the basic grammar learned from Levels 1 to 5, you can make various expressions.</li>
-<li>You expand your vocabulary not only with everyday terms but also with Sino-Korean vocabulary, gaining a deeper understanding of Korean thought patterns and culture.</li>
-<li>You can engage in daily conversation and express your opinions in detail through longer narratives. You can also write texts on everyday topics.</li>
-<li>You can listen to and understand relatively long dialogues and texts about Korean society and culture, enhancing your understanding of the content.</li>
-</ul>
-<hr>
-<h3><strong>Level 7</strong></h3>
-<ul>
-<li><strong>Textbook</strong>:&nbsp;<span>Yonsei Korean in 3 Weeks 7</span></li>
-<li>You cultivate the ability to understand academic and specialized texts in fields such as humanities, social sciences, and the arts, and to express your opinions logically.</li>
-<li>You can understand news, newspaper articles, and current materials and express your opinions.</li>
-<li>You understand Korean values related to language, education, work and leisure, economy, popular culture, tradition, family, and society.</li>
-</ul>
-<hr>
-<h3><strong>Level 8</strong></h3>
-<ul>
-<li><strong>Textbook</strong>:&nbsp;<span>Yonsei Korean in 3 Weeks 8</span></li>
-<li>You can freely use Korean grammar to engage in complex and specialized activities.</li>
-<li>You learn vocabulary expansion and the thought patterns of Koreans through professional materials that reflect Korean society and culture.</li>
-<li>You cultivate language skills that allow you to participate in university-level activities.</li>
-</ul>													</li>
-					</ul>
-				</li>
-					</ul>
-					</div>
-			</div>
-		</div>
-
-</div>
-
-<div id="online-global" class="page-content">
-
-
-
-</div>
-
-
-
-
-
+                <div class="feature-card">
+                    <div class="feature-icon">🌏</div>
+                    <h3>Cultural Immersion</h3>
+                    <p>Experience Korean culture through special events, cooking classes, and cultural workshops.</p>
+                </div>
             </div>
-        </div>
-    </div>
+
+            <div class="cta-section">
+                <h2>Ready to Start Your Korean Journey?</h2>
+                <p>Enroll now — limited seats available</p>
+                <a href="#enroll" class="btn">Enroll Today</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SeoulMate Language & Culture. All rights reserved.</p>
+    </footer>
 </body>
-
-
-                                    
+</html>
