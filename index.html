@@ -1,175 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Seoulmate – Modern Landing Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Korean Language Institute</title>
+
 
 <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
     body {
         margin: 0;
-        padding: 0;
-        font-family: "Segoe UI", sans-serif;
-        background-color: #ffffff;
+        font-family: Arial, sans-serif;
     }
 
-    /* 🔥 MODERN NAVBAR */
-    .navbar {
-        padding: 0 0;
-        
-        background: rgb(181 181 181 / 70%);
-        transition: 0.3s;
-    }
-
-    .navbar.scrolled {
-        background: rgba(255, 255, 255, 0.95);
-        box-shadow: 0 2px 18px rgba(0,0,0,0.08);
-    }
-
-    .navbar-brand img {
-        height: 65px;
-    }
-
-    .nav-link {
-        font-size: 1.1rem;
-        margin-left: 18px;
-        font-weight: 500;
-        color: #333 !important;
-    }
-
-    /* 🔥 MODERN SLIDER */
-    .carousel-item {
-        height: 650px;
+    /* Header Carousel */
+    header {
         position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        color: white;
     }
 
-    .carousel-item img {
+    .carousel-slide {
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        filter: brightness(75%);
-    }
-
-    /* Gradient overlay */
-    .carousel-item::before {
-        content: "";
         position: absolute;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
         top: 0;
+        left: 100%;
+        transition: all 0.5s ease-in-out;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .carousel-slide.active {
         left: 0;
     }
 
-    /* 🔥 MODERN TEXT */
-    .carousel-caption {
-        bottom: 45%;
-        transform: translateY(50%);
-        text-align: left;
-        left: 8%;
+    .carousel-slide.prev {
+        left: -100%;
     }
 
-    .carousel-caption h1 {
-        font-size: 4rem;
-        font-weight: 800;
-        line-height: 1.2;
-        color: #fff;
-        text-shadow: 0px 5px 25px rgba(0,0,0,0.65);
+    /* Logo */
+    .logo {
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        width: 150px;
+        z-index: 10;
     }
 
-    .carousel-caption p {
-        font-size: 1.4rem;
-        margin-top: 10px;
-        color: #e8e8e8;
-        max-width: 500px;
+    /* Navigation Menu */
+    nav {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+        z-index: 10;
     }
 
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        filter: invert(1);
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+        font-size: 16px;
     }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* Banner Text */
+    .banner-text {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        z-index: 10;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+
+    .banner-text h1 {
+        font-size: 36px;
+        margin: 0;
+    }
+
+    .banner-text p {
+        font-size: 18px;
+        margin: 5px 0 0;
+    }
+
+    /* Carousel Arrows */
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 50px;
+        color: white;
+        cursor: pointer;
+        z-index: 10;
+        user-select: none;
+        padding: 10px;
+        background: rgba(0,0,0,0.3);
+        border-radius: 50%;
+    }
+
+    .arrow-left {
+        left: 20px;
+    }
+
+    .arrow-right {
+        right: 20px;
+    }
+
+    /* Tabs Section */
+   .tabs {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* space evenly */
+    background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+    z-index: 10;
+}
+
+.tabs div {
+    flex: 1; /* each tab fills equal width */
+    text-align: center;
+    padding: 15px 0; /* taller clickable area */
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-right: 1px solid rgba(255,255,255,0.3);
+}
+
+.tabs div:last-child {
+    border-right: none; /* remove border on last tab */
+}
+
+.tabs div:hover {
+    background: rgba(255,255,255,0.2); /* highlight on hover */
+}
+.tabs div.active-tab {
+    background: rgba(255, 255, 255, 0.3); /* highlight clicked tab */
+    color: #FFD700; /* optional: golden text color */
+}
+
+
+
+    /* Content Section */
+    .tab-content {
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+
+    .tab-content img {
+        width: 200px;
+        float: left;
+        margin-right: 20px;
+        border-radius: 5px;
+    }
+
+    .tab-content h2 {
+        margin-top: 0;
+    }
+.slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* centers both horizontally and vertically */
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.slide-text h1 {
+    font-size: 36px;
+    margin: 0 0 10px;
+}
+
+.slide-text p {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Buttons Section */
+    .feature-btn {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+        padding: 25px;
+        font-size: 22px;
+        font-weight: 600;
+        text-align: center;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    .feature-btn:hover {
+        transform: translateY(-5px);
+        background: #ffefcc;
+    }
+
+    /* Course Cards */
+    .course-card {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transition: 0.3s;
+        font-weight: 600;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .course-card:hover {
+        transform: translateY(-6px);
+        background: #fff7e0;
+    }
+
+    /* Icons Animation */
+    .feature-btn i, .course-card i {
+        transition: transform 0.3s, color 0.3s;
+        margin-bottom: 10px;
+    }
+    .feature-btn:hover i, .course-card:hover i {
+        transform: scale(1.3) rotate(10deg);
+        color: #ff7b00 !important;
+    }
+
+    .notice-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
 
 </style>
-
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
+<header>
+    <img src="img/logo.png" alt="Logo" class="logo">
+    <nav>
+        <a href="#">Home</a>
+        <a href="course.html">Courses</a>
+        <a href="#">Notice/News</a>
+        <a href="#">Contact</a>
+    </nav>
 
-        <a class="navbar-brand" href="#">
-            <img src="img/logo.png" alt="Logo" style="width: 70px !important;">
-        </a>
+    <!-- <div class="banner-text">
+        <h1>한국어학당</h1>
+        <p>Seoulmate: Korean language & culture institute</p>
+    </div> -->
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-            </ul>
+     <!-- Carousel Slides with Text -->
+    <div class="carousel-slide active" style="background-image: url('img/11.jpg');">
+        <div class="slide-text">
+            <h1>Welcome to Seoulmate!</h1>
+            <p>We are eager to support your success on this exciting language journey.</p>
         </div>
-
     </div>
-</nav>
-
-<!-- SLIDER -->
-<div id="heroSlider" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-inner">
-
-        <div class="carousel-item active">
-            <img src="img/11.jpg" alt="Slide 1">
-            <div class="carousel-caption">
-                <h1>Explore the Mountains</h1>
-                <p>Feel the breeze. Enjoy the silence. Find yourself.</p>
-            </div>
+    <div class="carousel-slide" style="background-image: url('img/22.jpg');">
+        <div class="slide-text">
+            <h1>Welcome to Seoulmate!</h1>
+            <p>We are eager to support your success on this exciting language journey.</p>
         </div>
-
-        <div class="carousel-item">
-            <img src="img/22.jpg" alt="Slide 2">
-            <div class="carousel-caption">
-                <h1>Feel the Forest</h1>
-                <p>A place where nature speaks and the mind rests.</p>
-            </div>
-        </div>
-
-        <div class="carousel-item">
-            <img src="img/33.jpg" alt="Slide 3">
-            <div class="carousel-caption">
-                <h1>Find Your Peace</h1>
-                <p>Discover beautiful moments crafted by nature.</p>
-            </div>
-        </div>
-
     </div>
+    <div class="carousel-slide" style="background-image: url('img/33.jpg');">
+        <div class="slide-text">
+            <h1>Welcome to Seoulmate!</h1>
+            <p>We are eager to support your success on this exciting language journey.</p>
+        </div>
+    </div>
+<div class="tabs">
+    <div onclick="showTab('greetings')">Greetings</div>
+    <div onclick="showTab('intro')">Seoulmate Introduction</div>
+    <div onclick="showTab('faculties')">Faculties</div>
+    <div onclick="showTab('location')">Location</div>
+</div>
+    <!-- Arrows -->
+    <div class="arrow arrow-left" onclick="prevSlide()">&#10094;</div>
+    <div class="arrow arrow-right" onclick="nextSlide()">&#10095;</div>
+</header>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
 
-    <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
+
+<div class="tab-content" id="tabContent">
+    <div id="greetings">
+        <img src="img/4.png" alt="Person">
+        <h2>Greetings</h2>
+        <p>Welcome to the Korean Language Institute. We are dedicated to providing high-quality Korean language education...</p>
+    </div>
+    <div id="intro" style="display:none;">
+        <h2>Seoulmate Introduction</h2>
+        <p>The Korean Language Institute was established with a vision to promote language learning and cultural exchange...</p>
+    </div>
+    <div id="faculties" style="display:none;">
+        <h2>Faculties</h2>
+        <p>Our faculty members are highly experienced and dedicated to teaching Korean language and culture to students from around the world...</p>
+    </div>
+    <div id="location" style="display:none;">
+        <h2>Location</h2>
+        <p>We are located in Seoul, South Korea. The institute is easily accessible via public transport...</p>
+    </div>
+</div>
+<br>
+<!-- Buttons Section -->
+<div class="container my-5">
+    <div class="row g-4 text-center">
+        <div class="col-md-4">
+            <div class="feature-btn">
+                <i class="fas fa-file-alt fa-2x" style="color:#ff7b00;"></i>
+                <div>Online Application</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-btn">
+                <i class="fas fa-calendar-alt fa-2x" style="color:#28a745;"></i>
+                <div>Academic Calendar</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-btn">
+                <i class="fas fa-certificate fa-2x" style="color:#007bff;"></i>
+                <div>Certificate</div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Course Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4 fw-bold">Course Information</h2>
+    <div class="row g-4">
+        <div class="col-md-3">
+            <div class="course-card">
+                <i class="fas fa-book-open fa-2x" style="color:#ff6f61;"></i>
+                <div>Regular Course</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="course-card">
+                <i class="fas fa-theater-masks fa-2x" style="color:#6f42c1;"></i>
+                <div>Culture Special Course</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="course-card">
+                <i class="fas fa-globe fa-2x" style="color:#17a2b8;"></i>
+                <div>Online Global Course</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="course-card">
+                <i class="fas fa-stopwatch fa-2x" style="color:#ffc107;"></i>
+                <div>3 Weeks Intensive Course</div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!-- NAVBAR SCROLL EFFECT -->
 <script>
-    window.addEventListener('scroll', () => {
-        const navbar = document.querySelector('.navbar');
-        navbar.classList.toggle('scrolled', window.scrollY > 20);
+    // Tab Function
+    function showTab(tabName) {
+        const tabs = ['greetings', 'intro', 'faculties', 'location'];
+        tabs.forEach(tab => {
+            document.getElementById(tab).style.display = (tab === tabName) ? 'block' : 'none';
+        });
+    }
+
+    // Carousel Function
+    let slides = document.querySelectorAll('.carousel-slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active', 'prev');
+            if(i === index) slide.classList.add('active');
+            if(i === currentSlide) slide.classList.add('prev');
+        });
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        let next = (currentSlide + 1) % slides.length;
+        showSlide(next);
+    }
+
+    function prevSlide() {
+        let prev = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(prev);
+    }
+
+    // Auto-slide every 5 seconds
+    setInterval(nextSlide, 5000);
+
+
+function showTab(tabName) {
+    const tabs = ['greetings', 'intro', 'faculties', 'location'];
+    
+    // Show/hide content
+    tabs.forEach(tab => {
+        document.getElementById(tab).style.display = (tab === tabName) ? 'block' : 'none';
     });
+
+    // Highlight active tab
+    const tabElements = document.querySelectorAll('.tabs div');
+    tabElements.forEach(tabEl => {
+        tabEl.classList.remove('active-tab');
+    });
+    
+    // Add active class to clicked tab
+    const clickedTab = Array.from(tabElements).find(tabEl => tabEl.textContent.replace(/\s+/g,'') 
+                            .toLowerCase() === tabName.replace(/\s+/g,'').toLowerCase());
+    if (clickedTab) clickedTab.classList.add('active-tab');
+}
+
+
+
 </script>
 
 </body>
