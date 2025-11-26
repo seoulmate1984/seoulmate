@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Korean Language Institute</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Header Carousel */
+    header {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        color: white;
+    }
+
+    .carousel-slide {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        transition: all 0.5s ease-in-out;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .carousel-slide.active {
+        left: 0;
+    }
+
+    .carousel-slide.prev {
+        left: -100%;
+    }
+
+    /* Logo */
+    .logo {
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        width: 150px;
+        z-index: 10;
+    }
+
+    /* Navigation Menu */
+    nav {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+        z-index: 10;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* Banner Text */
+    .banner-text {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        z-index: 10;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+
+    .banner-text h1 {
+        font-size: 36px;
+        margin: 0;
+    }
+
+    .banner-text p {
+        font-size: 18px;
+        margin: 5px 0 0;
+    }
+
+    /* Carousel Arrows */
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 50px;
+        color: white;
+        cursor: pointer;
+        z-index: 10;
+        user-select: none;
+        padding: 10px;
+        background: rgba(0,0,0,0.3);
+        border-radius: 50%;
+    }
+
+    .arrow-left {
+        left: 20px;
+    }
+
+    .arrow-right {
+        right: 20px;
+    }
+
+    /* Tabs Section */
+   .tabs {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* space evenly */
+    background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+    z-index: 10;
+}
+
+.tabs div {
+    flex: 1; /* each tab fills equal width */
+    text-align: center;
+    padding: 15px 0; /* taller clickable area */
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-right: 1px solid rgba(255,255,255,0.3);
+}
+
+.tabs div:last-child {
+    border-right: none; /* remove border on last tab */
+}
+
+.tabs div:hover {
+    background: rgba(255,255,255,0.2); /* highlight on hover */
+}
+.tabs div.active-tab {
+    background: rgba(255, 255, 255, 0.3); /* highlight clicked tab */
+    color: #FFD700; /* optional: golden text color */
+}
+
+
+
+    /* Content Section */
+    .tab-content {
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+
+    .tab-content img {
+        width: 200px;
+        float: left;
+        margin-right: 20px;
+        border-radius: 5px;
+    }
+
+    .tab-content h2 {
+        margin-top: 0;
+    }
+.slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* centers both horizontally and vertically */
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.slide-text h1 {
+    font-size: 36px;
+    margin: 0 0 10px;
+}
+
+.slide-text p {
+    font-size: 18px;
+    margin: 0;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <img src="img/logo.png" alt="Logo" class="logo">
+    <nav>
+        <a href="index.html">Home</a>
+        <a class="active" href="course.html">Courses</a>
+        <a href="noticenews.html">Notice/News</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- <div class="banner-text">
+        <h1>한국어학당</h1>
+        <p>Seoulmate: Korean language & culture institute</p>
+    </div> -->
+
+     <!-- Carousel Slides with Text -->
+    <div class="carousel-slide active" style="background-image: url('img/11.jpg');">
+        <div class="slide-text">
+            <h1>Learn Korean Easily</h1>
+            <p>Start your language journey with expert guidance.</p>
+        </div>
+    </div>
+    <div class="carousel-slide" style="background-image: url('img/22.jpg');">
+        <div class="slide-text">
+            <h1>Explore Korean Culture</h1>
+            <p>Immerse yourself in traditions, food, and lifestyle.</p>
+        </div>
+    </div>
+    <div class="carousel-slide" style="background-image: url('img/33.jpg');">
+        <div class="slide-text">
+            <h1>Join Our Community</h1>
+            <p>Meet learners from around the world and make friends.</p>
+        </div>
+    </div>
+<div class="tabs">
+    <div onclick="showTab('regularcourse')">Regular course</div>
+    <div onclick="showTab('culturespecial')">Culture special course</div>
+    <div onclick="showTab('onlineglobal')">Online global course</div>
+    <div onclick="showTab('weeksintensive')">3weeks intensive course</div>
+</div>
+    <!-- Arrows -->
+    <div class="arrow arrow-left" onclick="prevSlide()">&#10094;</div>
+    <div class="arrow arrow-right" onclick="nextSlide()">&#10095;</div>
+</header>
+
+
+
+<div class="tab-content" id="tabContent">
+    <div id="regularcourse">
+        <h2>Regular course</h2>
+        <ul>
+            <li><strong>The Regular Program</strong> at the Korean Language Institute is designed for foreigners and overseas Koreans interested in learning the Korean language and culture. It is suitable for those planning to enter universities or graduate schools in Korea, seeking employment, or studying for leisure.</li>
+            <li><strong>Student Demographics:</strong> An average of 1,700 students from around 60 countries enroll each semester.</li>
+            <li><strong>Classes:</strong> Align with the levels of the Korean Language Proficiency Test (TOPIK). Starting from Level 1, it takes approximately 1 year and 6 months to complete all 6 levels up to Level 6.</li>
+            <li><strong>Course Structure:</strong> The Regular program consists of a <strong>10-week course</strong> per semester, totaling <strong>200 hours</strong>, offered across <strong>4 semesters annually</strong>.</li>
+            <li><strong>Class Schedule:</strong>
+                <ul>
+                    <li>Morning Course: Monday to Friday, 9:00 AM - 1:00 PM</li>
+                    <li>Afternoon Course: Monday to Friday, 2:00 PM - 5:50 PM</li>
+                    <li>Weekday morning course: Mon, Tue, Thu, Fri, 6:00-7:00</li>
+                    <li>Weekday evening course: Mon, Tue, Thu, Fri, 18:00-19:00</li>
+                    <li>Weekend morning course: Sat, Sun, 10:00-12:00</li>
+                    <li>Weekend afternoon course: Sat, Sun, 16:00-18:00</li>
+                </ul>
+            </li>
+            <li><strong>Application Fee:</strong> Non-refundable, 200rs</li>
+            <li><strong>Tuition Fee (per semester):</strong> 1,800rs</li>
+        </ul>
+    </div>
+    <div id="culturespecial" style="display:none;">
+        <h2>Seoulmate Introduction</h2>
+        <p>The Korean Language Institute was established with a vision to promote language learning and cultural exchange...</p>
+    </div>
+    <div id="onlineglobal" style="display:none;">
+        <h2>Faculties</h2>
+        <p>Our faculty members are highly experienced and dedicated to teaching Korean language and culture to students from around the world...</p>
+    </div>
+    <div id="weeksintensive" style="display:none;">
+        <h2>Location</h2>
+        <p>We are located in Seoul, South Korea. The institute is easily accessible via public transport...</p>
+    </div>
+</div>
+
+<script>
+    // Tab Function
+    function showTab(tabName) {
+        const tabs = ['regularcourse', 'culturespecial', 'onlineglobal', 'weeksintensive'];
+        tabs.forEach(tab => {
+            document.getElementById(tab).style.display = (tab === tabName) ? 'block' : 'none';
+        });
+    }
+
+    // Carousel Function
+    let slides = document.querySelectorAll('.carousel-slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active', 'prev');
+            if(i === index) slide.classList.add('active');
+            if(i === currentSlide) slide.classList.add('prev');
+        });
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        let next = (currentSlide + 1) % slides.length;
+        showSlide(next);
+    }
+
+    function prevSlide() {
+        let prev = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(prev);
+    }
+
+    // Auto-slide every 5 seconds
+    setInterval(nextSlide, 5000);
+
+
+function showTab(tabName) {
+    const tabs = ['greetings', 'intro', 'faculties', 'location'];
+    
+    // Show/hide content
+    tabs.forEach(tab => {
+        document.getElementById(tab).style.display = (tab === tabName) ? 'block' : 'none';
+    });
+
+    // Highlight active tab
+    const tabElements = document.querySelectorAll('.tabs div');
+    tabElements.forEach(tabEl => {
+        tabEl.classList.remove('active-tab');
+    });
+    
+    // Add active class to clicked tab
+    const clickedTab = Array.from(tabElements).find(tabEl => tabEl.textContent.replace(/\s+/g,'') 
+                            .toLowerCase() === tabName.replace(/\s+/g,'').toLowerCase());
+    if (clickedTab) clickedTab.classList.add('active-tab');
+}
+
+
+
+</script>
+
+</body>
+</html>
