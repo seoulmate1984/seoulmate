@@ -371,7 +371,52 @@
     </div>
 </div>
 
+<div class="modal fade" id="noticeModal_rec">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+
+    <div class="modal-header">
+        <h5 class="modal-title fw-bold">
+            [Online course announcement] Recruitment
+        </h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+
+    <div class="modal-body">
+
+<img src="img/recr.jpg" alt="Recruitment" class="mb-4" style="width: 50%; margin-left: 25%;">
+
+        <!-- <p><strong>Date:</strong> 2025-06-02 &nbsp;&nbsp; | &nbsp;&nbsp; <strong>Views:</strong> 8,210</p>
+        <hr>
+
+        <p>Download the official brochure in your preferred language.</p>
+
+        <ul>
+            <li>Russian</li>
+            <li>Mongolian</li>
+            <li>Vietnamese</li>
+            <li>Thai</li>
+        </ul> -->
+
+    </div>
+</div>
+</div>
+</div>
+
+
+    </div>
+
+
+    
 <script>
+
+window.addEventListener('load', function () {
+    const posterModal = new bootstrap.Modal(
+        document.getElementById('noticeModal_rec')
+    );
+    posterModal.show();
+});
+    
     // Tab Function
     function showTab(tabName) {
         const tabs = ['greetings', 'intro', 'faculties', 'location'];
